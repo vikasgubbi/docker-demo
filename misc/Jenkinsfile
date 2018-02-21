@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://hub.docker.com/') {
+     docker.withRegistry('https://hub.docker.com/vikasga') {
        def app = docker.build("docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
